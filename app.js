@@ -18,7 +18,11 @@ var activeBoards = {};
 io.on('connection', function(socket) {
 
     socket.on('create_board', function(data) {
+
         var board = makeid();
+
+        //if(!data.board_id)
+        board = data.channel;
 
         activeBoards[board] = {
             users: []

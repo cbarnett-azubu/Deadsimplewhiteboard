@@ -33,7 +33,8 @@ angular.module('WhiteboardApp')
                     });
 
                     socket.emit('create_board', {
-                        name: 'lalla'
+                        name: 'lalla',
+                        channel:'CBarnett'
                     });
 
                     return defer.promise;
